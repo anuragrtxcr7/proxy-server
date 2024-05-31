@@ -12,10 +12,10 @@ const PORT = process.env.PORT || 8000;
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   next();
+// });
 
 // Define a route to forward requests to the API server
 app.all('/api/*', async (req, res) => {
